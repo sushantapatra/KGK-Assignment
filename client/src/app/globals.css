@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--background: #ffffff;
+	--htmlForeground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: #0a0a0a;
+		--htmlForeground: #ededed;
+	}
+}
+
+body {
+	color: var(--htmlForeground);
+	background: var(--background);
+	font-family: Arial, Helvetica, sans-serif;
+}
+.ck-editor__editable_inline:not(.ck-comment__input *) {
+	height: 200px;
+	overflow-y: auto;
+}
