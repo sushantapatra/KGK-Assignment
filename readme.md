@@ -40,4 +40,4 @@ This CMS should allow users to create, edit, and delete posts and pages through 
 
 ### Set the database and import mysql file
 
-### create a .env file and set all necessary credentials
+### replace .env values as yours
