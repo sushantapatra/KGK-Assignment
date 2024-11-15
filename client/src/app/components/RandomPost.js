@@ -45,6 +45,7 @@ const RandomPost = ({ title }) => {
 						<Link
 							href={`/post/${post.id}`}
 							className="flex group mt-4 "
+							key={post.id}
 						>
 							{/* <div className="flex-shrink-0 ">
 									<Image

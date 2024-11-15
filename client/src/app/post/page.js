@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import RandomPost from "../components/RandomPost";
 import axios from "axios";
 import { useCookies } from "next-client-cookies";
+import Slider from "../plugin/slider/Slider";
 
 import Image from "next/image";
 import pic1 from "../../../assets/images/pic1.png";
@@ -87,7 +88,10 @@ function Post() {
 
 						{posts.length > 0 ? (
 							posts.map((post) => (
-								<div className="rounded-sm overflow-hidden bg-white shadow-sm ">
+								<div
+									className="rounded-sm overflow-hidden bg-white shadow-sm "
+									key={post.id}
+								>
 									<div className="p-4 pb-5 ">
 										<Link href={`/post/${post.id}`}>
 											<h2 className="block text-2xl font-semibold text-gray-700 hover:text-blue-500 transition font-roboto ">
@@ -136,8 +140,9 @@ function Post() {
 
 						{/* Main Posts End */}
 					</div>
-					<div class="lg:w-3/12 w-full mt-8 lg:mt-0 ">
+					<div className="lg:w-3/12 w-full mt-8 lg:mt-0 ">
 						<RandomPost title="Popular Posts" />
+						<Slider />
 					</div>
 				</div>
 			</div>

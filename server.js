@@ -48,6 +48,8 @@ app.get("/", (req, res) => {
 // Define all User Router Here
 app.use("/api/v1/user", require("./routes/userRouter"));
 app.use("/api/v1/post", require("./routes/postRouter"));
+app.use("/api/v1/plugin", require("./routes/pluginRouter"));
+app.use("/api/v1/imageslider", require("./routes/imagesliderRouter"));
 //connection.end();
 
 //listen port

@@ -11,15 +11,17 @@ import pic4 from "../../assets/images/pic4.png";
 import pic5 from "../../assets/images/pic5.png";
 import pic6 from "../../assets/images/pic6.png";
 import pic7 from "../../assets/images/pic7.png";
+
+import Slider from "../app/plugin/slider/Slider";
 export default function Home() {
 	return (
 		<>
 			<Header />
 			<div className="py-4 bg-gray-200 ">
 				<div className="container mx-auto px-4 flex flex-wrap lg:flex-nowrap ">
-					<div className="w-3/12 hidden xl:block ">
+					{/* <div className="w-3/12 hidden xl:block ">
 						<RandomPost title="Random Posts" />
-					</div>
+					</div> */}
 					<div className="xl:w-6/12 lg:w-9/12 w-full xl:ml-6 lg:mr-6 ">
 						<div className="flex bg-white px-3 py-4 justify-between items-center rounded-sm ">
 							<h5 className="text-base uppercase font-semibold font-roboto ">
@@ -29,7 +31,7 @@ export default function Home() {
 								href="#"
 								className="text-white py-1 px-3 rounded-xl uppercase text-sm bg-blue-500 border border-blue-500 hover:text-blue-500 hover:bg-transparent transition  "
 							>
-								See More
+								See More 123
 							</a>
 						</div>
 
@@ -229,11 +231,13 @@ export default function Home() {
 
 						{/* Main Posts End */}
 					</div>
-					<div class="lg:w-3/12 w-full mt-8 lg:mt-0 ">
-						<RandomPost title="Popular Posts" />
+					<div class="lg:w-6/12 w-full mt-8 lg:mt-0 ">
+						{/* <RandomPost title="Popular Posts" /> */}
+						<Slider />
 					</div>
 				</div>
 			</div>
+
 			<FooterWithSidebar />
 		</>
 	);

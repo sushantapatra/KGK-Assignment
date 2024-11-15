@@ -39,9 +39,13 @@ const Login = () => {
 				});
 				cookies.set("token", res.data.token);
 				router.push("/backend/posts");
-				toast.success(res.data.message);
+				toast.success(res.data.message, {
+					autoClose: 1000,
+				});
 			} else {
-				toast.error(res.data.message);
+				toast.error(res.data.message, {
+					autoClose: 1000,
+				});
 			}
 		} catch (error) {
 			console.log(error);

@@ -6,7 +6,7 @@ import Image from "next/image";
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 import { useCookies } from "next-client-cookies";
-// import { initFlowbite } from "flowbite";
+import { initFlowbite } from "flowbite";
 import { BsFillPencilFill } from "react-icons/bs";
 import { BsFillTrash3Fill } from "react-icons/bs";
 import { BsEye } from "react-icons/bs";
@@ -119,7 +119,7 @@ const PostList = () => {
 				});
 				setPostLoading(true);
 				document
-					.getElementById("drawer-right-example")
+					.getElementById("drawer-right-product")
 					.classList.add("hidden");
 				toast.success(res.data.message);
 			} else {
@@ -301,7 +301,7 @@ const PostList = () => {
 	}, [postLoading]);
 	useEffect(() => {
 		// Initialize Flowbite components manually
-		//initFlowbite();
+		initFlowbite();
 	}, []);
 
 	useEffect(() => {
@@ -313,7 +313,7 @@ const PostList = () => {
 	return (
 		<>
 			<Header />
-			<Sidebar />
+			{/* <Sidebar /> */}
 			<div className="p-4 sm:ml-64">
 				<div className="p-4 rounded-lg dark:border-gray-700 mt-14">
 					<section>
@@ -360,10 +360,10 @@ const PostList = () => {
 										<button
 											type="button"
 											className="flex items-center justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
-											data-drawer-target="drawer-right-example"
-											data-drawer-show="drawer-right-example"
+											data-drawer-target="drawer-right-product"
+											data-drawer-show="drawer-right-product"
 											data-drawer-placement="right"
-											aria-controls="drawer-right-example"
+											aria-controls="drawer-right-product"
 										>
 											<svg
 												className="h-3.5 w-3.5 mr-2"
@@ -628,7 +628,7 @@ const PostList = () => {
 					</section>
 					{/* Add Drawer */}
 					<div
-						id="drawer-right-example"
+						id="drawer-right-product"
 						className="fixed top-14 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white  w-1/3 dark:bg-gray-800"
 						tabIndex="-1"
 						aria-labelledby="drawer-right-label"
@@ -650,8 +650,8 @@ const PostList = () => {
 						</h4>
 						<button
 							type="button"
-							data-drawer-hide="drawer-right-example"
-							aria-controls="drawer-right-example"
+							data-drawer-hide="drawer-right-product"
+							aria-controls="drawer-right-product"
 							className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"
 						>
 							<svg
