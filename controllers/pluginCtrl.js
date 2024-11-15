@@ -9,7 +9,7 @@ const getPlugin = async (req, res) => {
 		//populate method basically create a relation with to collection
 		const plugins = await getAllPlugin();
 		if (!plugins) {
-			return res.status(404).json({
+			return res.status(200).json({
 				success: false,
 				message: "No result found",
 			});
@@ -30,7 +30,7 @@ const saveActivePlugin = async (req, res) => {
 		//populate method basically create a relation with to collection
 		const result = await activePlugin(userId, plugins);
 		if (!result) {
-			return res.status(404).json({
+			return res.status(200).json({
 				success: false,
 				message: "No result found",
 			});
@@ -68,7 +68,7 @@ const getActivePluginName = async (req, res) => {
 		const userId = req.id;
 		const plugins = await getAllActivePluginNAme(userId);
 		if (!plugins) {
-			return res.status(404).json({
+			return res.status(200).json({
 				success: false,
 				message: "No result found",
 			});

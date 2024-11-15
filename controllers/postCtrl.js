@@ -15,7 +15,7 @@ const getAllPost = async (req, res) => {
 		//populate method basically create a relation with to collection
 		const posts = await getAllPosts();
 		if (!posts) {
-			return res.status(404).json({
+			return res.status(200).json({
 				success: false,
 				message: "No result found",
 			});
@@ -33,7 +33,7 @@ const getRandomPost = async (req, res) => {
 		//populate method basically create a relation with to collection
 		const posts = await getRandomPosts();
 		if (!posts) {
-			return res.status(404).json({
+			return res.status(200).json({
 				success: false,
 				message: "No result found",
 			});
@@ -52,7 +52,7 @@ const getPostData = async (req, res) => {
 		//populate method basically create a relation with to collection
 		const posts = await getPostsById({ id: postId });
 		if (!posts) {
-			return res.status(404).json({
+			return res.status(200).json({
 				success: false,
 				message: "No result found",
 			});
@@ -70,7 +70,7 @@ const getUserPosts = async (req, res) => {
 		const userId = req.id;
 		const posts = await getPostsByUserId({ user_id: userId });
 		if (!posts) {
-			return res.status(404).json({
+			return res.status(200).json({
 				success: false,
 				message: "No result found",
 			});
@@ -129,7 +129,7 @@ const getPost = async (req, res) => {
 		const postId = req.params.id;
 		const posts = await getPostsById({ id: postId });
 		if (!posts) {
-			return res.status(404).json({
+			return res.status(200).json({
 				success: false,
 				message: "No result found",
 			});
@@ -173,7 +173,7 @@ const UpdatePost = async (req, res) => {
 		req.body.user_id = userId;
 		const posts = await updatePost(postId, req.body);
 		if (!posts) {
-			return res.status(404).json({
+			return res.status(200).json({
 				success: false,
 				message: "No result found",
 			});
@@ -193,7 +193,7 @@ const DeletePost = async (req, res) => {
 		const postId = req.params.id;
 		const post = await deletePost(userId, postId);
 		if (!post) {
-			return res.status(404).json({
+			return res.status(200).json({
 				success: false,
 				message: "Post not found",
 			});

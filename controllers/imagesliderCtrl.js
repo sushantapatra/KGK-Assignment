@@ -11,7 +11,7 @@ const getAllImageSliders = async (req, res) => {
 		//populate method basically create a relation with to collection
 		const imagesliders = await getImageSlider();
 		if (!imagesliders) {
-			return res.status(404).json({
+			return res.status(200).json({
 				success: false,
 				message: "No result found",
 			});
@@ -72,7 +72,7 @@ const DeleteImageSlide = async (req, res) => {
 		const imgId = req.params.id;
 		const post = await deleteImage(imgId);
 		if (!post) {
-			return res.status(404).json({
+			return res.status(200).json({
 				success: false,
 				message: "Image not found",
 			});
