@@ -1,4 +1,5 @@
-#CMS with WYSIWYG Editor and Plugin Architecture on Next.js
+# CMS with WYSIWYG Editor and Plugin Architecture on Next.js
+
 This CMS should allow users to create, edit, and delete posts and pages through a user-friendly interface. The CMS should also feature an intuitive, WYSIWYG (What You See Is What You Get) editor that enables users to format content visually, with features similar to modern website builders. Furthermore, a plugin architecture should be integrated to facilitate extensibility, allowing users to enhance functionality over time by adding custom components or features.
 
 ## Features
