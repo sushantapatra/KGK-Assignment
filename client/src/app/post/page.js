@@ -7,6 +7,7 @@ import RandomPost from "../components/RandomPost";
 import axios from "axios";
 import { useCookies } from "next-client-cookies";
 import Slider from "../plugin/slider/Slider";
+import { truncateText } from "../Utility";
 
 import Image from "next/image";
 import pic1 from "../../../assets/images/pic1.png";
@@ -102,7 +103,10 @@ function Post() {
 										<div
 											className="text-gray-500 text-sm mt-2 "
 											dangerouslySetInnerHTML={{
-												__html: post.content,
+												__html: truncateText(
+													post.content,
+													50
+												),
 											}}
 										/>
 										<div className="mt-3 flex space-x-4 ">

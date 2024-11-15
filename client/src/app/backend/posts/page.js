@@ -30,6 +30,7 @@ import {
 import "ckeditor5/ckeditor5.css";
 import { Drawer } from "flowbite";
 import { useRouter } from "next/navigation";
+import { truncateText } from "../../Utility";
 
 const PostList = () => {
 	const cookies = useCookies();
@@ -453,7 +454,10 @@ const PostList = () => {
 														<td className="px-4 py-3 overflow-hidden text-ellipsis whitespace-nowrap">
 															<div
 																dangerouslySetInnerHTML={{
-																	__html: post.content,
+																	__html: truncateText(
+																		post.content,
+																		10
+																	),
 																}}
 															/>
 														</td>
