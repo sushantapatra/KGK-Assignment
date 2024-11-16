@@ -47,7 +47,7 @@ const Slider = () => {
 
 	const prevSlide = () => {
 		setCurrentIndex(
-			(prevIndex) => (prevIndex - 1 + imgSlides.length) % images.length
+			(prevIndex) => (prevIndex - 1 + imgSlides.length) % imgSlides.length
 		);
 	};
 	const nextSlide = () => {
@@ -98,6 +98,7 @@ const Slider = () => {
 									layout="fill"
 									objectFit="cover"
 									className="rounded-xl transition-all duration-500 ease-in-out cursor-pointer"
+									priority
 								/>
 							)}
 						</div>
