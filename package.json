@@ -1,5 +1,5 @@
 {
-	"name": "crm",
+	"name": "cms",
 	"version": "1.0.0",
 	"main": "server.js",
 	"scripts": {
@@ -12,7 +12,7 @@
 	"keywords": [],
 	"author": "Sushanta Kumar Patra",
 	"license": "ISC",
-	"description": "CRM Application",
+	"description": "CMS Application",
 	"dependencies": {
 		"bcryptjs": "^2.4.3",
 		"cloudinary": "^2.5.1",
